@@ -26,4 +26,8 @@ class Node {
     - right : Node
 }
 
+' relationships
+JobScheduler --> BinarySearchTree
+BinarySearchTree --> Node
+
 @enduml
