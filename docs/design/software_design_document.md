@@ -39,6 +39,11 @@ BinarySearchTree --> Node
 
 ```
 2. Design Principles Analysis
+Single Responsibility Principle (Violated, see Violations section)
+Open-Close Principle (Violated, since when I implement time conflict rules, they are currently located inside where I insert jobs. As a result, adding any new scheduling rules such as priorities or recurring jobs would require direct modification to the BST. This does however make the prototype easier to build at the moment which is a good tradeoff given the time constraint of the project.)
+LIskov Substituion Principle (N/A, since I don't really have subclasses so this isn't an issue. In the future with priority implemented though, I think this would be more relevant.)
+Interface Segregatin Principle (N/A, not applicable)
+Dependency Inversion Principle (Violated, same reason as violation 4 in Violations section)
 
 3. Future Requirement Changes
 Change 1: Recurring Jobs - Soemtimes the user might want to requeue jobs that they have added in the past. current design does not handle this feature well since the user has to re-add their tasks manually each time. BST insertion logic would need major updates.
