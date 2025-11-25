@@ -1,2 +1,29 @@
 @startuml
+
+' main program
+class JobScheduler {
+    - bst : BinarySearchTree
+    + addJob(name, start, duration)
+    + deleteJob(name)
+    + viewJobs()
+    + run()
+}
+
+' data structures
+class BinarySearchTree {
+    - root : Node
+    + insertJob(jobInfo)
+    + deleteJob(name)
+    + jobOrder()
+}
+
+class Node {
+    - name : String
+    - startTime : DateTime
+    - duration : DateTime
+    - endTime : DateTime
+    - left : Node
+    - right : Node
+}
+
 @enduml
