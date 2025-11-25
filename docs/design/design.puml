@@ -19,9 +19,9 @@ class BinarySearchTree {
 
 class Node {
     - name : String
-    - startTime : DateTime
-    - duration : DateTime
-    - endTime : DateTime
+    - startTime : float
+    - duration : float
+    - endTime : float
     - left : Node
     - right : Node
 }
